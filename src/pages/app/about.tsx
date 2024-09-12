@@ -5,7 +5,11 @@ export function About() {
     <>
       <Helmet title="Sobre" />
 
-      <h1>About</h1>
+      <main className="mx-auto w-[1100px]">
+        <div>
+          <h1>Quem sou eu?</h1>
+        </div>
+      </main>
     </>
   )
 }

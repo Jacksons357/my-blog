@@ -12,6 +12,10 @@ const headerLinks = [
     href: '/blog',
   },
   {
+    title: 'Projetos',
+    href: '/projects',
+  },
+  {
     title: 'Sobre',
     href: '/about',
   },
@@ -25,11 +29,13 @@ export function Header() {
   return (
     <header className="flex h-12 items-center border-b">
       <div className="flex flex-row w-[1200px] mx-auto justify-between">
-        <div className="flex items-center gap-2">
-          <CodeXml className="w-5 text-secondary-foreground" />
-          <span className="text-secondary-foreground font-semibold">
-            devjackson
-          </span>
+        <div className="flex items-center">
+          <a href="/" className="items-center flex gap-2">
+            <CodeXml className="w-5 text-secondary-foreground " />
+            <span className="text-secondary-foreground font-semibold">
+              devjackson
+            </span>
+          </a>
         </div>
 
         <nav className="flex gap-5 items-center">

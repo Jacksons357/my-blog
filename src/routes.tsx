@@ -6,6 +6,7 @@ import { SignIn } from './pages/auth/sign-in'
 import { BLog } from './pages/app/blog'
 import { About } from './pages/app/about'
 import { Contact } from './pages/app/contact'
+import { Projects } from './pages/app/projects'
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: '/blog',
         element: <BLog />,
+      },
+      {
+        path: '/projects',
+        element: <Projects />,
       },
       {
         path: '/about',
