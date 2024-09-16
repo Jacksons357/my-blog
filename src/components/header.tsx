@@ -1,6 +1,8 @@
 import { CodeXml } from 'lucide-react'
 import { ModeToggle } from './mode-toggle'
 import { NavLink } from 'react-router-dom'
+import { FaLinkedin } from 'react-icons/fa'
+import { FaGithub } from 'react-icons/fa'
 
 const headerLinks = [
   {
@@ -53,7 +55,23 @@ export function Header() {
             </NavLink>
           ))}
         </nav>
-        <ModeToggle />
+        <div className="flex items-center">
+          <a
+            href="https://github.com/Jacksons357"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub className=" w-8 h-8 hover:bg-muted-foreground/15 px-2 rounded-lg" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jacksonsantosdev/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin className=" w-8 h-8 hover:bg-muted-foreground/15 p-2 rounded-lg" />
+          </a>
+          <ModeToggle />
+        </div>
       </div>
     </header>
   )
