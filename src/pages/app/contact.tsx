@@ -1,4 +1,4 @@
-import { InConstruction } from '@/components/in-construction'
+import { Contacts } from '@/components/contacts'
 import { Helmet } from 'react-helmet-async'
 
 export function Contact() {
@@ -6,7 +6,9 @@ export function Contact() {
     <>
       <Helmet title="Contato" />
 
-      <InConstruction />
+      <main className="mx-auto w-[1100px]">
+        <Contacts />
+      </main>
     </>
   )
 }
