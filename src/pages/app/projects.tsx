@@ -1,3 +1,4 @@
+import { InConstruction } from '@/components/in-construction'
 import { Helmet } from 'react-helmet-async'
 
 export function Projects() {
@@ -5,7 +6,7 @@ export function Projects() {
     <>
       <Helmet title="Projetos" />
 
-      <h1>Projetos</h1>
+      <InConstruction />
     </>
   )
 }
