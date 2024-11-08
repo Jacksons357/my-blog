@@ -9,18 +9,18 @@ const headerLinks = [
     title: 'Início',
     href: '/',
   },
-  {
-    title: 'Blog',
-    href: '/blog',
-  },
+  // {
+  //   title: 'Blog',
+  //   href: '/blog',
+  // },
   {
     title: 'Projetos',
     href: '/projects',
   },
-  {
-    title: 'Sobre',
-    href: '/about',
-  },
+  // {
+  //   title: 'Sobre',
+  //   href: '/about',
+  // },
   {
     title: 'Contato',
     href: '/contact',

@@ -1,6 +1,4 @@
-import project1 from './../assets/img/project1.svg'
-import project2 from './../assets/img/project3.svg'
-import project3 from './../assets/img/project2.svg'
+import project1 from './../assets/img/projects1.png'
 
 import { FaExternalLinkAlt } from 'react-icons/fa'
 
@@ -8,25 +6,12 @@ import { Button } from './ui/button'
 
 const imagesContent = [
   {
-    title: 'Products Transfers',
-    description: 'It is a long established fact that a reader will',
+    title: 'Drogarias Campeã',
+    description:
+      '"Sistema digital de transferência de produtos desenvolvido para as Drogarias Campeã, oferecendo um controle eficiente de transferências e envios de produtos entre lojas. A solução promove maior organização e elimina a necessidade do uso de cadernos, proporcionando mais agilidade e precisão nas operações.',
     img: project1,
     alt: 'Foto do projeto de transfêrencias de produtos.',
-    href: '/projects',
-  },
-  {
-    title: 'Project example',
-    description: 'It is a long established fact that a reader will',
-    img: project2,
-    alt: 'Foto do projeto de transfêrencias de produtos.',
-    href: '/projects',
-  },
-  {
-    title: 'Project example 2',
-    description: 'It is a long established fact that a reader will',
-    img: project3,
-    alt: 'Foto do projeto de transfêrencias de produtos.',
-    href: '/projects',
+    href: '/projects#projeto1',
   },
 ]
 
@@ -50,7 +35,9 @@ export function ProjectsResume() {
               <h1 className="text-muted-foreground text-2xl font-semibold">
                 {item.title}
               </h1>
-              <p className="text-muted-foreground/50">{item.description}</p>
+              <p className="text-muted-foreground/50 text-justify">
+                {item.description}
+              </p>
               <a href={item.href} target="_blank" rel="noreferrer">
                 <Button className="h-6 bg-transparent border text-xs text-muted-foreground hover:bg-muted-foreground/5 gap-1 mt-1 px-3">
                   <FaExternalLinkAlt />
@@ -58,12 +45,12 @@ export function ProjectsResume() {
                 </Button>
               </a>
             </div>
-            <div className="w-1/2 flex justify-center">
+            <div className="flex justify-center max-w-[600px]">
               <a href={item.href} target="_blank" rel="noreferrer">
                 <img
                   src={item.img}
                   alt={item.alt}
-                  className="w-[400px] hover:filter hover:brightness-75 transition-all duration-500 rounded-md"
+                  className="w-full hover:filter hover:brightness-75 transition-all duration-500 rounded-md"
                 />
               </a>
             </div>
