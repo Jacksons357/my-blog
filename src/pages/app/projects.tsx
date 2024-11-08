@@ -90,19 +90,24 @@ export function Projects() {
           <div className="text-muted-foreground text-sm space-y-5 tracking-wide text-justify">
             <h2 className="text-xl text-secondary-foreground">Tabela (CRUD)</h2>
             <p>
-              Quando o botão de adicionar transferência é clicado, um modal será
-              aberto, permitindo a inserção dos dados para uma nova
-              transferência.
+              Na tela inicial, após o login, há uma tabela que exibe todas as
+              transferências e seus respectivos detalhes, como a data de
+              criação, código de barras, quantidade, e, no caso de medicamentos
+              antibióticos, as informações de lote e validade. Também são
+              apresentados o nome da loja de destino, o status da transferência
+              e dois botões: um para atualizar o status da transferência e outro
+              para removê-la.
             </p>
             <p>
-              No campo de código de barras, ao digitar um código EAN
-              (obrigatoriamente EAN), uma API externa será chamada para buscar o
-              nome do produto, capturando automaticamente as três primeiras
-              palavras.
+              Uma das ações disponíveis é enviar a transferência. Para isso, o
+              usuário deve carregar o XML no campo correspondente. Após o envio,
+              uma mensagem será exibida no canto inferior direito da tela,
+              confirmando que a transferência foi realizada com sucesso.
             </p>
             <p>
-              Com todos os campos preenchidos, o botão para confirmar a adição
-              da nova transferência será habilitado.
+              Também é possível remover a transferência, se necessário. Ao
+              clicar no ícone de lixeira, um modal será aberto para confirmar a
+              exclusão da transferência.
             </p>
           </div>
           <div className="m-auto mt-10 text-start">

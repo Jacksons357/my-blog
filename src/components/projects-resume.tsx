@@ -21,7 +21,7 @@ export function ProjectsResume() {
       <h1 className="text-secondary-foreground text-3xl font-semibold border-b pb-3">
         Projetos
       </h1>
-      <div className="flex flex-col p-6 space-y-10">
+      <div className="flex flex-col p-6 space-y-10 mt-10">
         {imagesContent.map((item, index) => (
           <div
             key={item.title}

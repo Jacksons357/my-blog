@@ -19,12 +19,12 @@ const imagesOpenModal = [
   },
   {
     href: sendTransfer,
-    alt: 'Imagem quando abre o modal',
+    alt: 'Imagem ',
     description: 'Digitando EAN',
   },
   {
     href: transferSuccess,
-    alt: 'Imagem quando abre o modal',
+    alt: 'Imagem quando abre',
     description: 'Todos dados preenchidos',
   },
   {

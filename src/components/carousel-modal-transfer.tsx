@@ -13,17 +13,17 @@ import modalTransferFinish from '../assets/project1/modal-transfer-finish.png'
 const imagesOpenModal = [
   {
     href: modalTransfer,
-    alt: 'Imagem quando abre o modal',
+    alt: 'Testando 01',
     description: 'Modal para adicionar uma transferência',
   },
   {
     href: modalTransferProduct,
-    alt: 'Imagem quando abre o modal',
+    alt: 'Testando 2',
     description: 'Digitando EAN',
   },
   {
     href: modalTransferFinish,
-    alt: 'Imagem quando abre o modal',
+    alt: 'Testando 13',
     description: 'Todos dados preenchidos',
   },
 ]
