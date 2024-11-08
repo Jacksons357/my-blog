@@ -2,10 +2,17 @@ import { Helmet } from 'react-helmet-async'
 import signIn from '../../assets/project1/sign-in.png'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { Button } from '@/components/ui/button'
-import { CarouselModalTransfer } from '@/components/carousel-modal-transfer'
 import { CarouselTableTransfer } from '@/components/carousel-table-transfer'
+import { useState } from 'react'
+import { SectionAddNewTransfer } from '@/components/section-add-new-transfer'
 
 export function Projects() {
+  const [description, setDescription] = useState('')
+
+  function handleCarouselChange(newDescription: string) {
+    setDescription(newDescription)
+  }
+
   return (
     <div className="mx-auto w-[1100px]">
       <Helmet title="Projetos" />
@@ -60,38 +67,15 @@ export function Projects() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 items-center mt-20">
-          <div className="m-auto mt-10 text-start">
-            <CarouselModalTransfer />
-          </div>
-          <div className="text-muted-foreground text-sm space-y-5 tracking-wide text-justify mt-20">
-            <h2 className="text-xl text-secondary-foreground">
-              Adicione uma nova transferência
-            </h2>
-            <p>
-              Quando o botão de adicionar transferência é clicado, um modal será
-              aberto, permitindo a inserção dos dados para uma nova
-              transferência.
-            </p>
-            <p>
-              No campo de código de barras, ao digitar um código EAN
-              (obrigatoriamente EAN), uma API externa será chamada para buscar o
-              nome do produto, capturando automaticamente as três primeiras
-              palavras.
-            </p>
-            <p>
-              Com todos os campos preenchidos, o botão para confirmar a adição
-              da nova transferência será habilitado.
-            </p>
-          </div>
-        </div>
+        <SectionAddNewTransfer />
 
         <div className="grid grid-cols-2 items-center mt-20 space-x-7">
           <div className="text-muted-foreground text-sm space-y-5 tracking-wide text-justify">
             <h2 className="text-xl text-secondary-foreground">Tabela (CRUD)</h2>
+            <p>{description}</p>
           </div>
           <div className="m-auto mt-10 text-start">
-            <CarouselTableTransfer />
+            <CarouselTableTransfer onChange={handleCarouselChange} />
           </div>
         </div>
       </section>

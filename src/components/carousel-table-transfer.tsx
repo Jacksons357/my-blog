@@ -10,6 +10,7 @@ import transferHome from '../assets/project1/table-transfer-home.png'
 import sendTransfer from '../assets/project1/table-transfer-send-transfer.png'
 import transferSuccess from '../assets/project1/table-transfer-send-success.png'
 import deleteTransfer from '../assets/project1/table-transfer-delete-transfer.png'
+import { useEffect, useState } from 'react'
 
 const imagesTableModal = [
   {
@@ -42,9 +43,28 @@ const imagesTableModal = [
   },
 ]
 
-export function CarouselTableTransfer() {
+interface CarouselTableTransferProps {
+  onChange: (description: string) => void
+}
+
+export function CarouselTableTransfer({
+  onChange,
+}: CarouselTableTransferProps) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    if (onChange) {
+      onChange(imagesTableModal[currentIndex].description)
+    }
+  }, [currentIndex, onChange])
+
   return (
-    <Carousel className="w-full max-w-[1000px]">
+    <Carousel
+      className="w-full max-w-[1000px]"
+      setApi={api =>
+        api?.on('select', () => setCurrentIndex(api.selectedScrollSnap()))
+      }
+    >
       <CarouselContent>
         {imagesTableModal.map(image => (
           <CarouselItem key={image.alt}>
