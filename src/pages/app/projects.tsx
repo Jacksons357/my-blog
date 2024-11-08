@@ -89,26 +89,6 @@ export function Projects() {
         <div className="grid grid-cols-2 items-center mt-20 space-x-7">
           <div className="text-muted-foreground text-sm space-y-5 tracking-wide text-justify">
             <h2 className="text-xl text-secondary-foreground">Tabela (CRUD)</h2>
-            <p>
-              Na tela inicial, após o login, há uma tabela que exibe todas as
-              transferências e seus respectivos detalhes, como a data de
-              criação, código de barras, quantidade, e, no caso de medicamentos
-              antibióticos, as informações de lote e validade. Também são
-              apresentados o nome da loja de destino, o status da transferência
-              e dois botões: um para atualizar o status da transferência e outro
-              para removê-la.
-            </p>
-            <p>
-              Uma das ações disponíveis é enviar a transferência. Para isso, o
-              usuário deve carregar o XML no campo correspondente. Após o envio,
-              uma mensagem será exibida no canto inferior direito da tela,
-              confirmando que a transferência foi realizada com sucesso.
-            </p>
-            <p>
-              Também é possível remover a transferência, se necessário. Ao
-              clicar no ícone de lixeira, um modal será aberto para confirmar a
-              exclusão da transferência.
-            </p>
           </div>
           <div className="m-auto mt-10 text-start">
             <CarouselTableTransfer />

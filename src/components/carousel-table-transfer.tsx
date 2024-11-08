@@ -11,26 +11,34 @@ import sendTransfer from '../assets/project1/table-transfer-send-transfer.png'
 import transferSuccess from '../assets/project1/table-transfer-send-success.png'
 import deleteTransfer from '../assets/project1/table-transfer-delete-transfer.png'
 
-const imagesOpenModal = [
+const imagesTableModal = [
   {
     href: transferHome,
     alt: 'Tela inicial com as transferências pendentes',
-    description: 'Tabelas com detalhes das transferências',
+    subtitle: 'Tabelas com detalhes das transferências',
+    description:
+      'Na tela inicial, após o login, há uma tabela que exibe todas as transferências e seus respectivos detalhes, como a data de criação, código de barras, quantidade, e, no caso de medicamentos antibióticos, as informações de lote e validade.',
   },
   {
     href: sendTransfer,
     alt: 'Imagem ',
-    description: 'Digitando EAN',
+    subtitle: 'Digitando EAN',
+    description:
+      'Uma das ações disponíveis é enviar a transferência. Para isso, o usuário deve carregar o XML no campo correspondente.',
   },
   {
     href: transferSuccess,
     alt: 'Imagem quando abre',
-    description: 'Todos dados preenchidos',
+    subtitle: 'Todos dados preenchidos',
+    description:
+      'Após o envio, uma mensagem será exibida no canto inferior direito da tela, confirmando que a transferência foi realizada com sucesso.',
   },
   {
     href: deleteTransfer,
     alt: 'Imagem quando abre o modal',
-    description: 'Todos dados preenchidos',
+    subtitle: 'Todos dados preenchidos',
+    description:
+      'Também é possível remover a transferência, se necessário. Ao clicar no ícone de lixeira, um modal será aberto para confirmar a exclusão da transferência.',
   },
 ]
 
@@ -38,7 +46,7 @@ export function CarouselTableTransfer() {
   return (
     <Carousel className="w-full max-w-[1000px]">
       <CarouselContent>
-        {imagesOpenModal.map(image => (
+        {imagesTableModal.map(image => (
           <CarouselItem key={image.alt}>
             <div>
               <Card className="border-none hover:bg-transparent p-0 m-0 ">
@@ -50,7 +58,7 @@ export function CarouselTableTransfer() {
                   />
                 </CardContent>
                 <CardDescription className="pb-2 pr-10 -mt-3 text-end">
-                  {image.description}
+                  {image.subtitle}
                 </CardDescription>
               </Card>
             </div>

@@ -14,17 +14,17 @@ const imagesOpenModal = [
   {
     href: modalTransfer,
     alt: 'Testando 01',
-    description: 'Modal para adicionar uma transferência',
+    subtitle: 'Modal para adicionar uma transferência',
   },
   {
     href: modalTransferProduct,
     alt: 'Testando 2',
-    description: 'Digitando EAN',
+    subtitle: 'Digitando EAN',
   },
   {
     href: modalTransferFinish,
     alt: 'Testando 13',
-    description: 'Todos dados preenchidos',
+    subtitle: 'Todos dados preenchidos',
   },
 ]
 
@@ -44,7 +44,7 @@ export function CarouselModalTransfer() {
                   />
                 </CardContent>
                 <CardDescription className="pb-2 pl-2 -mt-3">
-                  {image.description}
+                  {image.subtitle}
                 </CardDescription>
               </Card>
             </div>
