@@ -2,17 +2,11 @@ import { Helmet } from 'react-helmet-async'
 import signIn from '../../assets/project1/sign-in.png'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 import { Button } from '@/components/ui/button'
-import { CarouselTableTransfer } from '@/components/carousel-table-transfer'
-import { useState } from 'react'
 import { SectionAddNewTransfer } from '@/components/section-add-new-transfer'
+import { SectionTable } from '@/components/section-table'
+import { SectionResume } from '@/components/section-resume'
 
 export function Projects() {
-  const [description, setDescription] = useState('')
-
-  function handleCarouselChange(newDescription: string) {
-    setDescription(newDescription)
-  }
-
   return (
     <div className="mx-auto w-[1100px]">
       <Helmet title="Projetos" />
@@ -67,17 +61,11 @@ export function Projects() {
           </div>
         </div>
 
-        <SectionAddNewTransfer />
-
-        <div className="grid grid-cols-2 items-center mt-20 space-x-7">
-          <div className="text-muted-foreground text-sm space-y-5 tracking-wide text-justify">
-            <h2 className="text-xl text-secondary-foreground">Tabela (CRUD)</h2>
-            <p>{description}</p>
-          </div>
-          <div className="m-auto mt-10 text-start">
-            <CarouselTableTransfer onChange={handleCarouselChange} />
-          </div>
-        </div>
+        <section className="space-y-32">
+          <SectionAddNewTransfer />
+          <SectionTable />
+          <SectionResume />
+        </section>
       </section>
     </div>
   )

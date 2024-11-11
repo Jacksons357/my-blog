@@ -1,4 +1,4 @@
-import { Card, CardContent, CardDescription } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -15,28 +15,28 @@ const imagesOpenModal = [
   {
     href: modalTransfer,
     alt: 'Testando 01',
-    subtitle: 'Modal para adicionar uma transferência',
+    title: 'Adicione uma nova transferência',
     description:
       'Quando o botão de adicionar transferência é clicado, um modal será aberto, permitindo a inserção dos dados para uma nova transferência.',
   },
   {
     href: modalTransferProduct,
     alt: 'Testando 2',
-    subtitle: 'Digitando EAN',
+    title: 'Produto buscado via código EAN',
     description:
       'No campo de código de barras, ao digitar um código EAN (obrigatoriamente EAN), uma API externa será chamada para buscar o nome do produto, capturando automaticamente as três primeiras palavras.',
   },
   {
     href: modalTransferFinish,
     alt: 'Testando 13',
-    subtitle: 'Todos dados preenchidos',
+    title: 'Validação de campos obrigatórios',
     description:
       'Com todos os campos preenchidos, o botão para confirmar a adição da nova transferência será habilitado.',
   },
 ]
 
 interface CarouselModalTransferProps {
-  onChange: (description: string) => void
+  onChange: (description: string, title: string) => void
 }
 
 export function CarouselModalTransfer({
@@ -46,7 +46,10 @@ export function CarouselModalTransfer({
 
   useEffect(() => {
     if (onChange) {
-      onChange(imagesOpenModal[currentIndex].description)
+      onChange(
+        imagesOpenModal[currentIndex].description,
+        imagesOpenModal[currentIndex].title
+      )
     }
   }, [currentIndex, onChange])
 
@@ -60,18 +63,15 @@ export function CarouselModalTransfer({
       <CarouselContent>
         {imagesOpenModal.map(image => (
           <CarouselItem key={image.alt}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6 flex-col">
+            <div>
+              <Card className="border-none m-0 p-0 hover:bg-transparent">
+                <CardContent className="p-0 flex justify-center">
                   <img
                     src={image.href}
                     alt={image.alt}
                     className="h-[400px] rounded-xl"
                   />
                 </CardContent>
-                <CardDescription className="pb-2 pl-2 -mt-3">
-                  {image.subtitle}
-                </CardDescription>
               </Card>
             </div>
           </CarouselItem>
